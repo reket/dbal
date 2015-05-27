@@ -81,6 +81,7 @@ class RemoveNamespacedAssets extends AbstractVisitor
         // The table may already be deleted in a previous
         // RemoveNamespacedAssets#acceptTable call. Removing Foreign keys that
         // point to nowhere.
+        /*
         if ( ! $this->schema->hasTable($fkConstraint->getForeignTableName())) {
             $localTable->removeForeignKey($fkConstraint->getName());
             return;
@@ -90,5 +91,6 @@ class RemoveNamespacedAssets extends AbstractVisitor
         if ( ! $foreignTable->isInDefaultNamespace($this->schema->getName())) {
             $localTable->removeForeignKey($fkConstraint->getName());
         }
+        */
     }
 }
